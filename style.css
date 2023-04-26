@@ -1,0 +1,195 @@
+/* global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* header */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.icon img {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  font-size: 30px;
+}
+.text-wrapper p {
+  font-size: 30px;
+  line-height: 40px;
+  transition: all 0.5s linear 0.5s;
+}
+.text-wrapper p:hover {
+  font-size: 40px;
+  color: blue;
+  line-height: 50px;
+}
+
+.text::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-color: black;
+  width: 2px;
+  height: 20px;
+  margin: 0 20px;
+}
+
+.button-wrapper button:last-child {
+  background-color: brown;
+  transition: all 0.5s linear 0.5s;
+}
+.button-wrapper button:last-child:hover {
+  background-color: red;
+}
+
+.circle {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  right: -250px;
+  /* transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  transition-timing-function: linear; */
+  transition: all 0.5s linear 0.5s;
+}
+
+.circle:hover {
+  width: 300px;
+  background-color: red;
+  right: 0;
+}
+body {
+  overflow-x: hidden;
+}
+.text-wrapper {
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+  padding: 10px;
+  overflow-y: auto;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 50px green;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.animation {
+  width: 200px;
+  height: 200px;
+
+  position: absolute;
+  animation-name: myanimation;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes myanimation {
+  0% {
+    top: 0px;
+    left: 0;
+    background-color: red;
+    border-radius: 50%;
+  }
+  50% {
+    top: 200px;
+    left: 200px;
+    background-color: blue;
+    border-radius: 0;
+    transform: rotate(-45deg);
+  }
+  100% {
+    top: 200px;
+    left: 0;
+    background-color: green;
+    border-radius: 505;
+  }
+}
+
+.animation2 {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  animation-name: myanimation2;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes myanimation2 {
+  0% {
+    bottom: 0;
+    right: 0;
+    background-image: url(./images/building.png);
+    border-radius: 50%;
+  }
+  30% {
+    bottom: 200px;
+    right: 200px;
+    background-image: url(./images/image.png);
+    border-radius: 0;
+    transform: rotate(-45deg);
+  }
+  70% {
+    bottom: 400px;
+    right: 400px;
+    border-radius: 0;
+    background-image: url(./images/main-building.png);
+    transform: scale(1.5);
+  }
+  100% {
+    bottom: 200px;
+    right: 200px;
+    background-image: url(./images/building.png);
+    border-radius: 10px;
+  }
+}
